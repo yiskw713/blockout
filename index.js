@@ -20,7 +20,7 @@ let rightPressed = false;
 let leftPressed = false;
 
 // ブロックに関する変数を設定する
-const brickRowCount = 3;
+const brickRowCount = 5;
 const brickColumnCount = 5;
 const brickWidth = 75;
 const brickHeight = 20;
@@ -166,8 +166,8 @@ const draw = () => {
             } else {
                 x = canvas.width / 2;
                 y = canvas.height / 2;
-                dx = 2;
-                dy = -2;
+                dx = Math.abs(dx);
+                dy = -Math.abs(dy);
                 paddleX = (canvas.width - paddleWidth) / 2;
             }
         }
